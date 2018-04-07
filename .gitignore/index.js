@@ -14,9 +14,9 @@ bot.on('guildMemberAdd', member => {
 });
 
 client.on("message", (message) => {
-    if (message.content.startsWith("F)kick")) {
+    if (message.content.startsWith("F?kick")) {
         // Easy way to get member object though mentions.
-        var member= message.mentions.members.first();
+        var member = message.mentions.members.first();
         // Kick
         member.kick().then((member) => {
             // Successmessage
