@@ -14,17 +14,20 @@ bot.on('guildMemberAdd', member => {
 });
 
 client.on("message", (message) => {
+	
     if (message.content.startsWith("F?kick")) {
         // Easy way to get member object though mentions.
-        var member = message.mentions.members.first();
+        var memberk = message.mentions.members.first();
         // Kick
-        member.kick().then((member) => {
+        memberk.kick().then((memberk) => {
             // Successmessage
-            message.channel.send(":wave: " + member.displayName + " a bien été kick :point_right: ");
+            message.channel.send(":wave: " + memberk.displayName + " a bien été kick :point_right: ");
         }).catch(() => {
              // Failmessage
             message.channel.send("Nope !");
         });
+	    
     }
+	
 });
 
