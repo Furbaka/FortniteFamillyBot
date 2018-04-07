@@ -13,22 +13,3 @@ bot.on('guildMemberAdd', member => {
     member.sendMessage("Salut ! Je suis le BOT de la Fortnite Family , tu est le bienvenue ! Je t'invite à lire le règlement , c'est moi qui te passeras toutes les infos et peut être tes avertissement !");
 });
 
-client.on('message', message => {
-	
-    if (message.content("F?kick")) {
-	message.delete();
-        // Easy way to get member object though mentions.
-        var memberk = message.mentions.members.first();
-        // Kick
-        memberk.kick().then((memberk) => {
-            // Successmessage
-            message.channel.send(":wave: " + memberk.displayName + " a bien été kick :point_right: ");
-        }).catch(() => {
-             // Failmessage
-            message.channel.send("Nope !");
-        });
-	    
-    }
-	
-});
-
