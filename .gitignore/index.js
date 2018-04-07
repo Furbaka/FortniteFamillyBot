@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 
 bot.on('ready', () => {
-	bot.user.setGame(`Botter des fesses`);
+	bot.user.setGame(`faire des TOP 1`);
 });
 
 bot.login(process.env.TOKEN);
